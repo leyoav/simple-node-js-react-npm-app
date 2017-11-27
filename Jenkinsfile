@@ -17,6 +17,11 @@ pipeline {
         sh './jenkins/scripts/test.sh'
       }
     }
+    stage('Deliver') {
+      steps {
+        input 'Going home ?'
+      }
+    }
   }
   environment {
     CI = 'true'
